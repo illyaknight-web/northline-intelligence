@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NORTHLINE™ — District Operations Intelligence | Function Media LLC</title>
+<meta name="description" content="NORTHLINE™ is a K–12 district operations intelligence platform developed by Function Media LLC, founded by Illya Knight. Explore how NORTHLINE education technology is designed to help districts organize operational information and support accountable decision-making.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="INSERT_FINAL_NORTHLINE_NETLIFY_URL">
+<meta name="google-site-verification" content="INSERT_GOOGLE_VERIFICATION_CODE">
+<meta name="theme-color" content="#0F1D2B">
+
+<!-- Open Graph -->
+<meta property="og:title" content="NORTHLINE™ — District Operations Intelligence">
+<meta property="og:description" content="A K–12 district operations intelligence platform developed by Function Media LLC. Designed to help districts bring attendance, transportation, safety, and communication information into one coherent, evidence-supported view.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="INSERT_FINAL_NORTHLINE_NETLIFY_URL">
+<meta property="og:site_name" content="NORTHLINE™">
+<meta property="og:image" content="INSERT_SOCIAL_SHARE_IMAGE_URL">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NORTHLINE™ — District Operations Intelligence">
+<meta name="twitter:description" content="A K–12 district operations intelligence platform developed by Function Media LLC.">
+<meta name="twitter:image" content="INSERT_SOCIAL_SHARE_IMAGE_URL">
+
+<!-- Favicon (NORTHLINE mark, inline SVG data URI — no external asset dependency) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect width='30' height='30' rx='7' fill='%231A2B3C'/%3E%3Crect x='8' y='8' width='14' height='14' rx='3' fill='none' stroke='%23C8923A' stroke-width='1.6'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<!-- Schema.org structured data — verified information only -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "INSERT_FINAL_NORTHLINE_NETLIFY_URL#organization",
+      "name": "Function Media LLC",
+      "url": "INSERT_FINAL_NORTHLINE_NETLIFY_URL",
+      "description": "Function Media LLC is a government-technology company founded by Illya Knight. The company develops intelligence infrastructure intended to help public institutions organize complex information, recognize meaningful relationships, and support accountable decision-making.",
+      "founder": { "@id": "INSERT_FINAL_NORTHLINE_NETLIFY_URL#founder" }
+    },
+    {
+      "@type": "Person",
+      "@id": "INSERT_FINAL_NORTHLINE_NETLIFY_URL#founder",
+      "name": "Illya Knight",
+      "jobTitle": "Founder and Managing Member",
+      "worksFor": { "@id": "INSERT_FINAL_NORTHLINE_NETLIFY_URL#organization" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "NORTHLINE",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "K-12 District Operations Intelligence Platform",
+      "operatingSystem": "Web",
+      "description": "NORTHLINE™ is a K–12 district operations intelligence platform developed by Function Media LLC.",
+      "creator": { "@id": "INSERT_FINAL_NORTHLINE_NETLIFY_URL#organization" }
+    }
+  ]
+}
+</script>
+
+<style>
+/* ============================================================
+   NORTHLINE™ PUBLIC SITE — inherits Command Center Design System v3
+     canvas   #F8F6F1 / off-white #EFECE5
+     ink      #1A2B3C   deep #0F1D2B
+     text mid #3D4752 / #5A6A7A   text light #7A8794 / #8B9BAD
+     accent   #1D4E89   bright #2D6EBD   tertiary #4A90C4
+     amber    #C8923A
+     sand     #D8CFC0 (border/divider)
+     status   green #1F8A5C · red #C24A42 · violet #7660B0
+   Type: IBM Plex Serif (headlines/quotes/emotional numbers)
+         IBM Plex Sans (UI/body)   IBM Plex Mono (labels/data, sparingly)
+   ============================================================ */
+:root{
+  --canvas:#F8F6F1; --canvas-alt:#EFECE5;
+  --ink:#1A2B3C; --ink-deep:#0F1D2B;
+  --mid:#3D4752; --mid2:#5A6A7A; --light:#7A8794; --light2:#8B9BAD;
+  --accent:#1D4E89; --accent-bright:#2D6EBD; --accent-soft:#4A90C4;
+  --amber:#C8923A; --amber-soft:#E4C596;
+  --sand:#D8CFC0; --sand-soft:#EAE3D6;
+  --green:#1F8A5C; --red:#C24A42; --violet:#7660B0;
+  --serif:'IBM Plex Serif',Georgia,'Times New Roman',serif;
+  --sans:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --mono:'IBM Plex Mono','SFMono-Regular',Consolas,monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--canvas);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.mono{font-family:var(--mono)}
+.serif{font-family:var(--serif)}
+::selection{background:var(--amber-soft);color:var(--ink-deep)}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:12px;top:-60px;background:var(--ink-deep);color:#fff;padding:10px 16px;border-radius:6px;font-size:13px;z-index:200;transition:top .15s}
+.skip-link:focus{top:12px}
+
+/* Accessible focus states everywhere */
+a:focus-visible,button:focus-visible,.btn-primary:focus-visible,.btn-ghost:focus-visible,.nav-cta:focus-visible{
+  outline:2px solid var(--accent-bright);outline-offset:2px;border-radius:4px;
+}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulseDot{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.5)}}
+.reveal{opacity:0;animation:fadeUp .7s ease forwards}
+.d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}.d4{animation-delay:.35s}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+  .reveal{opacity:1;animation:none}
+}
+
+/* ---------- Topbar (mirrors Command Center persistent shell) ---------- */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(248,246,241,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--sand)}
+.topbar-inner{max-width:1180px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.wordmark{display:flex;align-items:center;gap:10px}
+.wordmark .mark{width:30px;height:30px;border-radius:7px;background:linear-gradient(150deg,var(--accent),var(--ink-deep));position:relative;flex-shrink:0}
+.wordmark .mark::after{content:'';position:absolute;inset:8px;border:1.5px solid var(--amber-soft);border-radius:3px}
+.wordmark .name{font-family:var(--serif);font-size:20px;letter-spacing:.03em;font-weight:500;color:var(--ink-deep)}
+.wordmark .name em{font-style:normal;color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:36px}
+.nav-links a{font-size:14px;color:var(--mid2);font-weight:500;transition:color .15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{padding:10px 20px;background:var(--ink-deep);color:var(--canvas);border-radius:7px;font-size:13.5px;font-weight:600;letter-spacing:.01em;transition:background .15s;border:none;cursor:pointer}
+.nav-cta:hover{background:var(--accent)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:radial-gradient(ellipse 80% 60% at 30% 0%, #16273b 0%, var(--ink-deep) 55%, #0a141e 100%);color:var(--canvas);overflow:hidden;padding:96px 0 120px}
+.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.05) 1px,transparent 1px);background-size:26px 26px;opacity:.5;pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-soft);border:1px solid rgba(200,146,58,.4);padding:6px 12px;border-radius:20px;background:rgba(200,146,58,.08)}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--amber);animation:pulseDot 2s ease-in-out infinite}
+h1.hero-h{font-family:var(--serif);font-weight:300;font-size:clamp(32px,4.2vw,54px);line-height:1.1;letter-spacing:-.01em;margin:22px 0 22px}
+h1.hero-h em{font-style:italic;font-weight:300;color:var(--amber-soft)}
+.hero-sub{font-size:16.5px;line-height:1.65;color:#B9C4D2;max-width:490px;margin-bottom:34px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{padding:14px 26px;background:var(--accent-bright);color:#fff;border-radius:8px;font-size:14.5px;font-weight:600;transition:background .15s,transform .15s;display:inline-block;border:none;cursor:pointer;font-family:inherit}
+.btn-primary:hover{background:#3a7fd6;transform:translateY(-1px)}
+.btn-ghost{padding:14px 26px;border:1px solid rgba(255,255,255,.22);color:var(--canvas);border-radius:8px;font-size:14.5px;font-weight:500;transition:border-color .15s,background .15s;background:none;cursor:pointer;font-family:inherit}
+.btn-ghost:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.05)}
+.hero-foot{margin-top:40px;display:flex;gap:28px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;color:#7C8CA0;letter-spacing:.04em}
+.hero-foot span{display:flex;align-items:center;gap:7px}
+.hero-foot .sq{width:7px;height:7px;background:var(--green);border-radius:1.5px}
+
+/* Signature visual: Evidence Thread — abstracted, illustrative */
+.thread-card{position:relative;background:rgba(15,29,43,.55);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:26px;backdrop-filter:blur(6px)}
+.thread-card .tc-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.thread-card .tc-head .tt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:#9FB0C4;text-transform:uppercase}
+.thread-card .tc-head .live{font-family:var(--mono);font-size:10.5px;color:var(--green);display:flex;align-items:center;gap:6px}
+.thread-card .tc-head .live .sq{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulseDot 1.8s infinite}
+.thread-caption{font-size:11px;color:#7C8CA0;margin-bottom:16px;font-style:italic}
+.tsvg{width:100%;height:auto;display:block}
+.thread-legend{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:18px}
+.tl-item{display:flex;align-items:center;gap:8px;font-size:12px;color:#B9C4D2}
+.tl-item .sw{width:9px;height:9px;border-radius:2px;flex-shrink:0}
+
+/* ---------- Sections ---------- */
+section{padding:104px 0}
+.section-head{max-width:660px;margin-bottom:56px}
+.section-eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block}
+h2.section-h{font-family:var(--serif);font-weight:300;font-size:clamp(26px,3.2vw,40px);line-height:1.18;color:var(--ink-deep)}
+h2.section-h em{font-style:italic;color:var(--accent)}
+.section-sub{margin-top:16px;font-size:16px;color:var(--mid2);line-height:1.65}
+
+/* Fragmented-record problem strip */
+.problem{background:var(--canvas-alt);border-top:1px solid var(--sand);border-bottom:1px solid var(--sand)}
+.problem-caption{font-size:12.5px;color:var(--light);font-style:italic;margin-bottom:24px}
+.record-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:32px}
+.rec-chip{background:#fff;border:1px solid var(--sand);border-radius:12px;padding:18px 18px 20px;position:relative}
+.rec-chip .rc-src{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--light);margin-bottom:10px}
+.rec-chip .rc-body{font-size:14px;color:var(--ink);line-height:1.45;font-weight:500}
+.rec-chip .rc-tag{margin-top:12px;display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;padding:3px 9px;border-radius:20px}
+.tag-conflict{background:rgba(194,74,66,.1);color:var(--red)}
+.tag-reported{background:rgba(200,146,58,.12);color:var(--amber)}
+.tag-verified{background:rgba(31,138,92,.1);color:var(--green)}
+.arrow-down{display:flex;justify-content:center;margin:6px 0 40px}
+.arrow-down svg{opacity:.4}
+.resolved-card{max-width:580px;margin:0 auto;background:var(--ink-deep);border-radius:14px;padding:26px 28px;color:var(--canvas);text-align:center}
+.resolved-card .rc-eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
+.resolved-card .rc-text{font-family:var(--serif);font-size:18px;font-weight:300;line-height:1.45}
+.resolved-card .rc-text em{color:var(--amber-soft);font-style:italic}
+
+/* Pillars */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pillar{background:#fff;border:1px solid var(--sand);border-radius:14px;padding:30px 26px;transition:transform .2s,box-shadow .2s}
+.pillar:hover{transform:translateY(-3px);box-shadow:0 16px 34px -18px rgba(26,43,60,.25)}
+.pillar .pi{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.pillar .pi svg{width:21px;height:21px}
+.pillar h3{font-family:var(--serif);font-weight:500;font-size:19px;margin-bottom:10px;color:var(--ink-deep)}
+.pillar p{font-size:14.5px;color:var(--mid2);line-height:1.6}
+.pi-blue{background:rgba(29,78,137,.1)}
+.pi-blue svg{color:var(--accent)}
+.pi-amber{background:rgba(200,146,58,.13)}
+.pi-amber svg{color:var(--amber)}
+.pi-green{background:rgba(31,138,92,.1)}
+.pi-green svg{color:var(--green)}
+
+/* Roles — mirrors Command Center's role-based dashboards */
+.roles-band{background:var(--ink-deep);color:var(--canvas)}
+.roles-band .section-eyebrow{color:var(--amber-soft)}
+.roles-band h2.section-h{color:#fff}
+.roles-band h2.section-h em{color:var(--amber-soft)}
+.roles-band .section-sub{color:#AEBBCB}
+.role-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.role-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:24px 22px;transition:background .2s,border-color .2s}
+.role-card:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.18)}
+.role-card .rc-tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--amber-soft);margin-bottom:14px;display:block}
+.role-card h3{font-family:var(--serif);font-size:18px;font-weight:500;margin-bottom:12px}
+.role-card ul{list-style:none}
+.role-card li{font-size:13px;color:#B9C4D2;line-height:1.5;padding-left:16px;position:relative;margin-bottom:8px}
+.role-card li::before{content:'';position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:var(--accent-soft)}
+
+/* Trust / evidence states */
+.trust-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+.evidence-states{display:flex;flex-direction:column;gap:12px}
+.state-row{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--sand);border-radius:10px;padding:14px 18px}
+.state-row .sw{width:11px;height:11px;border-radius:3px;flex-shrink:0}
+.state-row .st-name{font-family:var(--mono);font-size:12.5px;font-weight:600;letter-spacing:.03em;width:110px;flex-shrink:0}
+.state-row .st-desc{font-size:13px;color:var(--mid2)}
+.trust-copy p{font-size:15.5px;color:var(--mid2);line-height:1.7;margin-bottom:18px}
+.trust-copy p:last-child{margin-bottom:0}
+.trust-copy strong{color:var(--ink-deep);font-weight:600}
+.trust-notice{margin-top:22px;padding:16px 18px;background:var(--canvas-alt);border:1px solid var(--sand);border-left:3px solid var(--amber);border-radius:8px;font-size:13.5px;color:var(--mid2);line-height:1.6}
+
+/* Quote / stat band -> reframed as non-quantified design principles */
+.stat-band{background:linear-gradient(120deg,var(--canvas-alt),var(--sand-soft));border-top:1px solid var(--sand);border-bottom:1px solid var(--sand)}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center}
+.stat-num{font-family:var(--serif);font-weight:300;font-size:34px;color:var(--accent);line-height:1.2}
+.stat-num em{font-style:italic;color:var(--amber)}
+.stat-label{margin-top:10px;font-size:13.5px;color:var(--mid2)}
+
+/* Family band — quiet product-family reference, no confidential detail */
+.family-band{padding:80px 0}
+.family-row{display:flex;gap:20px;flex-wrap:wrap;align-items:stretch;margin-top:36px}
+.fam-card{flex:1;min-width:220px;border:1px solid var(--sand);border-radius:12px;padding:20px}
+.fam-card.active{border-color:var(--accent);background:rgba(29,78,137,.04)}
+.fam-card .fc-name{font-family:var(--serif);font-size:17px;font-weight:500;margin-bottom:6px;color:var(--ink-deep)}
+.fam-card .fc-desc{font-size:13px;color:var(--mid2);line-height:1.5}
+
+/* Founder / company section */
+.founder-band{background:var(--canvas-alt);border-top:1px solid var(--sand);border-bottom:1px solid var(--sand)}
+.founder-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.founder-card{background:#fff;border:1px solid var(--sand);border-radius:14px;padding:30px}
+.founder-card .fc-initial{width:52px;height:52px;border-radius:12px;background:linear-gradient(150deg,var(--accent),var(--ink-deep));color:#fff;font-family:var(--serif);font-size:22px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.founder-card h3{font-family:var(--serif);font-size:20px;font-weight:500;color:var(--ink-deep);margin-bottom:4px}
+.founder-card .role{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.founder-card p{font-size:14px;color:var(--mid2);line-height:1.65}
+.company-copy p{font-size:15.5px;color:var(--mid2);line-height:1.7;margin-bottom:16px}
+.company-copy p:last-child{margin-bottom:0}
+.company-copy strong{color:var(--ink-deep);font-weight:600}
+
+/* CTA */
+.cta{background:var(--ink-deep);color:var(--canvas);text-align:center;padding:110px 0}
+.cta h2{font-family:var(--serif);font-weight:300;font-size:clamp(26px,3.2vw,40px);margin-bottom:18px}
+.cta h2 em{font-style:italic;color:var(--amber-soft)}
+.cta p{color:#AEBBCB;font-size:16px;max-width:530px;margin:0 auto 34px}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cta-note{margin-top:28px;font-size:12.5px;color:#7C8CA0;font-family:var(--mono)}
+
+/* Contact section (scroll target for placeholder email) */
+.contact-band{padding:80px 0;text-align:center}
+.contact-card{max-width:520px;margin:0 auto;background:#fff;border:1px solid var(--sand);border-radius:14px;padding:34px}
+.contact-card h3{font-family:var(--serif);font-size:21px;font-weight:500;color:var(--ink-deep);margin-bottom:12px}
+.contact-card p{font-size:14.5px;color:var(--mid2);line-height:1.6;margin-bottom:6px}
+.contact-placeholder{display:inline-block;margin-top:12px;padding:8px 14px;background:var(--canvas-alt);border:1px dashed var(--sand);border-radius:6px;font-family:var(--mono);font-size:12.5px;color:var(--mid);letter-spacing:.02em}
+
+/* Footer */
+footer{background:var(--canvas-alt);border-top:1px solid var(--sand);padding:48px 0 30px}
+.foot-grid{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:30px;margin-bottom:34px}
+.foot-links{display:flex;gap:44px;flex-wrap:wrap}
+.foot-col h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--light);margin-bottom:12px;font-weight:500}
+.foot-col a,.foot-col button{display:block;font-size:13.5px;color:var(--mid2);margin-bottom:8px;background:none;border:none;padding:0;cursor:pointer;font-family:inherit;text-align:left}
+.foot-col a:hover,.foot-col button:hover{color:var(--accent)}
+.foot-legal{border-top:1px solid var(--sand);padding-top:22px;display:flex;flex-direction:column;gap:6px;font-size:12px;color:var(--light)}
+
+@media(max-width:920px){
+  .hero-grid{grid-template-columns:1fr}
+  .thread-card{order:-1}
+  .nav-links{display:none}
+  .pillars{grid-template-columns:1fr}
+  .role-grid{grid-template-columns:1fr 1fr}
+  .record-row{grid-template-columns:1fr 1fr}
+  .trust-grid{grid-template-columns:1fr;gap:34px}
+  .stat-grid{grid-template-columns:1fr;gap:28px}
+  .family-row{flex-direction:column}
+  .founder-grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .wrap{padding:0 20px}
+  .role-grid{grid-template-columns:1fr}
+  .record-row{grid-template-columns:1fr}
+  .foot-links{gap:26px}
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#top" class="wordmark" aria-label="NORTHLINE home">
+      <span class="mark" aria-hidden="true"></span>
+      <span class="name">NORTHLINE<em>™</em></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#platform">Platform</a>
+      <a href="#how">How It Works</a>
+      <a href="#roles">For Every Role</a>
+      <a href="#trust">Trust &amp; Governance</a>
+      <a href="#company">Company</a>
+    </nav>
+    <button class="nav-cta" data-scroll-to="contact">Request a Briefing</button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top" aria-labelledby="hero-heading">
+  <div class="wrap hero-grid">
+    <div class="reveal d1">
+      <span class="eyebrow"><span class="dot" aria-hidden="true"></span> K–12 DISTRICT OPERATIONS INTELLIGENCE</span>
+      <h1 class="hero-h" id="hero-heading">Every school day generates a record. NORTHLINE™ is designed to make it <em>coherent</em>.</h1>
+      <p class="hero-sub">Attendance, transportation, safety, and communication already generate information across your district — just rarely in the same place, in the same language, at the same time. NORTHLINE™ is a platform developed by Function Media LLC to help bring that information together into one evidence-supported operational view.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" data-scroll-to="contact">Request a Briefing</button>
+        <a href="#how" class="btn-ghost">See How It Works</a>
+      </div>
+      <div class="hero-foot">
+        <span><span class="sq" aria-hidden="true"></span> Built for K–12 district operations</span>
+        <span><span class="sq" aria-hidden="true"></span> Designed for human-reviewed decision-making</span>
+      </div>
+    </div>
+    <div class="reveal d3">
+      <div class="thread-card">
+        <div class="tc-head">
+          <span class="tt">Evidence Thread</span>
+        </div>
+        <p class="thread-caption">Illustrative example — not live district data.</p>
+        <svg class="tsvg" viewBox="0 0 460 250" role="img" aria-label="Diagram showing four illustrative record sources — attendance, transportation, building access, and guardian contact — converging into a single verified record.">
+          <g font-family="IBM Plex Mono" font-size="9.5" fill="#9FB0C4">
+            <circle cx="46" cy="40" r="5" fill="#C24A42"/>
+            <text x="60" y="44">Attendance system</text>
+            <circle cx="46" cy="90" r="5" fill="#C8923A"/>
+            <text x="60" y="94">Transportation log</text>
+            <circle cx="46" cy="140" r="5" fill="#4A90C4"/>
+            <text x="60" y="144">Building access</text>
+            <circle cx="46" cy="190" r="5" fill="#7660B0"/>
+            <text x="60" y="194">Guardian contact</text>
+          </g>
+          <g stroke="#3a4d63" stroke-width="1.2" fill="none">
+            <path d="M52 40 C 200 40, 260 130, 350 128" stroke-dasharray="4 5"/>
+            <path d="M52 90 C 200 90, 260 130, 350 128" stroke-dasharray="4 5"/>
+            <path d="M52 140 C 200 140, 260 130, 350 128" stroke-dasharray="4 5"/>
+            <path d="M52 190 C 200 190, 260 130, 350 128" stroke-dasharray="4 5"/>
+          </g>
+          <circle cx="350" cy="128" r="26" fill="none" stroke="#1F8A5C" stroke-width="1.5"/>
+          <circle cx="350" cy="128" r="4" fill="#1F8A5C"/>
+          <text x="350" y="172" font-family="IBM Plex Mono" font-size="9.5" fill="#7FD4A8" text-anchor="middle">VERIFIED RECORD</text>
+        </svg>
+        <div class="thread-legend">
+          <div class="tl-item"><span class="sw" style="background:#C24A42" aria-hidden="true"></span>Conflicting report</div>
+          <div class="tl-item"><span class="sw" style="background:#C8923A" aria-hidden="true"></span>Awaiting confirmation</div>
+          <div class="tl-item"><span class="sw" style="background:#4A90C4" aria-hidden="true"></span>System-reported</div>
+          <div class="tl-item"><span class="sw" style="background:#1F8A5C" aria-hidden="true"></span>Verified</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="problem" id="how" aria-labelledby="how-heading">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">THE CHALLENGE</span>
+      <h2 class="section-h" id="how-heading">Four systems. <em>Four different stories.</em></h2>
+      <p class="section-sub">A single student's morning can look different depending on which system is consulted — and reconciling those differences today often means phone calls, spreadsheets, and manual follow-up.</p>
+    </div>
+    <p class="problem-caption">Illustrative example — not an actual student or district record.</p>
+    <div class="record-row">
+      <div class="rec-chip">
+        <div class="rc-src">Attendance</div>
+        <div class="rc-body">Marked present, 1st period.</div>
+        <span class="rc-tag tag-conflict">Conflict</span>
+      </div>
+      <div class="rec-chip">
+        <div class="rc-src">Transportation</div>
+        <div class="rc-body">No scan at morning pickup.</div>
+        <span class="rc-tag tag-conflict">Conflict</span>
+      </div>
+      <div class="rec-chip">
+        <div class="rc-src">Building Access</div>
+        <div class="rc-body">No badge entry recorded.</div>
+        <span class="rc-tag tag-reported">Reported</span>
+      </div>
+      <div class="rec-chip">
+        <div class="rc-src">Guardian</div>
+        <div class="rc-body">"Home sick today, forgot to call."</div>
+        <span class="rc-tag tag-verified">Confirmed</span>
+      </div>
+    </div>
+    <div class="arrow-down" aria-hidden="true">
+      <svg width="22" height="34" viewBox="0 0 22 34" fill="none"><path d="M11 0V32M11 32L2 23M11 32L20 23" stroke="#B7AF9E" stroke-width="1.6"/></svg>
+    </div>
+    <div class="resolved-card">
+      <div class="rc-eyebrow">Designed to support faster, more consistent review</div>
+      <p class="rc-text">One <em>coherent, evidence-supported</em> record — intended to be visible in a consistent way to the teacher, the front office, and the family, with the supporting information preserved.</p>
+    </div>
+  </div>
+</section>
+
+<section id="platform" aria-labelledby="platform-heading">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">THE PLATFORM</span>
+      <h2 class="section-h" id="platform-heading">Designed as one operating picture for the <em>whole district</em>.</h2>
+      <p class="section-sub">NORTHLINE™ is not intended to replace a district's existing systems. It is designed to sit alongside them, helping surface what's known and giving every role a view built for their day. Potential applications include attendance review, transportation coordination, and campus-level operational reporting.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal d1">
+        <div class="pi pi-blue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3.6M12 17.4V21M3 12h3.6M17.4 12H21M6 6l2.4 2.4M15.6 15.6L18 18M18 6l-2.4 2.4M8.4 15.6L6 18"/></svg></div>
+        <h3>Coherent operational record</h3>
+        <p>Attendance, transportation, safety, and communication information can be organized into a single reference per student and per campus — with the status and source of each piece of information kept visible.</p>
+      </div>
+      <div class="pillar reveal d2">
+        <div class="pi pi-amber" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9h18M8 4v5"/></svg></div>
+        <h3>Guided review</h3>
+        <p>When records appear to disagree, NORTHLINE™ is designed to route that discrepancy to an appropriate person for review, and to track the item until it is resolved by a human decision-maker.</p>
+      </div>
+      <div class="pillar reveal d3">
+        <div class="pi pi-green" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7l8-4z"/></svg></div>
+        <h3>Accountability by design</h3>
+        <p>Confirmations and corrections made by authorized users are intended to be preserved in a clear record — so districts can describe not just what was reported, but how it was reviewed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="roles-band" id="roles" aria-labelledby="roles-heading">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">FOR EVERY ROLE</span>
+      <h2 class="section-h" id="roles-heading">Designed for the people <em>who run the day</em>.</h2>
+      <p class="section-sub">Parents, teachers, principals, and district leaders have different needs. NORTHLINE™ is designed to give each of them a view suited to their role — illustrative examples below.</p>
+    </div>
+    <div class="role-grid">
+      <div class="role-card reveal d1">
+        <span class="rc-tag">Parent / Guardian</span>
+        <h3>Clarity, intended</h3>
+        <ul>
+          <li>A plain-language view of their child's day</li>
+          <li>Designed to notify when their input is needed</li>
+          <li>Intended as one place to confirm or clarify information</li>
+        </ul>
+      </div>
+      <div class="role-card reveal d2">
+        <span class="rc-tag">Teacher</span>
+        <h3>Less administrative burden</h3>
+        <ul>
+          <li>A roster-first view intended to highlight what may need attention</li>
+          <li>Discrepancies designed to be routed for review, not manually chased</li>
+          <li>Space for recognition alongside operational items</li>
+        </ul>
+      </div>
+      <div class="role-card reveal d3">
+        <span class="rc-tag">Principal</span>
+        <h3>A campus-level view</h3>
+        <ul>
+          <li>A queue intended to surface items that may need a decision</li>
+          <li>Designed to support visibility into campus-wide patterns</li>
+          <li>Open items intended to be tracked through to resolution</li>
+        </ul>
+      </div>
+      <div class="role-card reveal d4">
+        <span class="rc-tag">District Leadership</span>
+        <h3>A broader operating picture</h3>
+        <ul>
+          <li>Cross-campus visibility intended to follow a consistent format</li>
+          <li>Records designed to support internal reporting and review</li>
+          <li>Intended to support early awareness of operational trends</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="trust" aria-labelledby="trust-heading">
+  <div class="wrap trust-grid">
+    <div class="reveal d1">
+      <span class="section-eyebrow">TRUST &amp; GOVERNANCE</span>
+      <h2 class="section-h" id="trust-heading" style="margin-bottom:22px">Designed to support <em>human judgment</em>.</h2>
+      <div class="trust-copy">
+        <p>NORTHLINE™ is designed so that an automated signal does not become a decision on its own. Each record is intended to carry a clear status, and status changes are intended to be tied to an authorized person, a source, and a stated reason.</p>
+        <p><strong>Human review is a core design intention, not an optional feature.</strong> The platform is built to flag discrepancies for a person to resolve — it is not designed to resolve them independently.</p>
+        <p>NORTHLINE™ is intended to support authorized administrators, educators, and staff — not to replace their judgment, a district's established authority, legal review, emergency procedures, or any legally required process.</p>
+      </div>
+      <div class="trust-notice">
+        NORTHLINE™ is a decision-support tool. It is not a substitute for professional judgment, legal counsel, or a district's official policies and procedures.
+      </div>
+    </div>
+    <div class="reveal d3">
+      <div class="evidence-states">
+        <div class="state-row"><span class="sw" style="background:#1F8A5C" aria-hidden="true"></span><span class="st-name">VERIFIED</span><span class="st-desc">Confirmed by an authorized person or a trusted, direct source.</span></div>
+        <div class="state-row"><span class="sw" style="background:#4A90C4" aria-hidden="true"></span><span class="st-name">REPORTED</span><span class="st-desc">Logged by a system, not yet independently confirmed.</span></div>
+        <div class="state-row"><span class="sw" style="background:#C8923A" aria-hidden="true"></span><span class="st-name">PENDING</span><span class="st-desc">Awaiting a specific person or step to close it out.</span></div>
+        <div class="state-row"><span class="sw" style="background:#C24A42" aria-hidden="true"></span><span class="st-name">CONFLICTING</span><span class="st-desc">Two or more sources appear to disagree — routed for review.</span></div>
+        <div class="state-row"><span class="sw" style="background:#7660B0" aria-hidden="true"></span><span class="st-name">INFERRED</span><span class="st-desc">A contextual read, always labeled as such rather than confirmed fact.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stat-band" aria-labelledby="principles-heading">
+  <div class="wrap">
+    <h2 class="visually-hidden" id="principles-heading">Design principles</h2>
+    <div class="stat-grid">
+      <div class="reveal d1">
+        <div class="stat-num">One record</div>
+        <div class="stat-label">Instead of several disconnected systems, by design</div>
+      </div>
+      <div class="reveal d2">
+        <div class="stat-num"><em>Faster review</em></div>
+        <div class="stat-label">Designed to support faster, more consistent review of discrepancies</div>
+      </div>
+      <div class="reveal d3">
+        <div class="stat-num">Four roles</div>
+        <div class="stat-label">Each intended to receive a view suited to their responsibilities</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="family-band" id="family" aria-labelledby="family-heading">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">FUNCTION MEDIA LLC</span>
+      <h2 class="section-h" id="family-heading">Part of a broader <em>intelligence infrastructure</em> portfolio.</h2>
+      <p class="section-sub">NORTHLINE™ is developed by Function Media LLC, alongside a portfolio of platforms exploring evidence-based intelligence infrastructure for public-purpose domains — each designed for its own field.</p>
+    </div>
+    <div class="family-row">
+      <div class="fam-card active">
+        <div class="fc-name">NORTHLINE™</div>
+        <div class="fc-desc">District operations intelligence for K–12 education.</div>
+      </div>
+      <div class="fam-card">
+        <div class="fc-name">SAFEPLATE™</div>
+        <div class="fc-desc">Food safety intelligence infrastructure for institutions and the public.</div>
+      </div>
+      <div class="fam-card">
+        <div class="fc-name">VERISCOPE™</div>
+        <div class="fc-desc">Intelligence infrastructure concepts for defense, maritime, and public-sector domains.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="founder-band" id="company" aria-labelledby="company-heading">
+  <div class="wrap founder-grid">
+    <div class="reveal d1">
+      <div class="founder-card">
+        <div class="fc-initial" aria-hidden="true">IK</div>
+        <h3>Illya Knight</h3>
+        <div class="role">Founder and Managing Member, Function Media LLC</div>
+        <p>Illya Knight founded Function Media LLC to apply operational and compliance discipline to public-sector information problems. His background spans operations leadership, regulatory compliance, and institutional problem-solving, which shapes NORTHLINE™'s focus on accountable, human-reviewed decision support for district operations.</p>
+      </div>
+    </div>
+    <div class="reveal d3">
+      <span class="section-eyebrow" id="company-heading">THE COMPANY</span>
+      <h2 class="section-h" style="margin-bottom:22px">Government-technology, built for <em>accountability</em>.</h2>
+      <div class="company-copy">
+        <p><strong>Function Media LLC</strong> is a government-technology company founded by Illya Knight. The company develops intelligence infrastructure intended to help public institutions organize complex information, recognize meaningful relationships, and support accountable decision-making.</p>
+        <p>NORTHLINE™ is a K–12 district operations intelligence platform developed by Function Media LLC — one part of a broader effort to bring the same evidence-based, human-reviewed approach to other public-purpose domains.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="cta" aria-labelledby="cta-heading">
+  <div class="wrap">
+    <h2 id="cta-heading">Explore how NORTHLINE™ <em>could support</em> your district.</h2>
+    <p>A briefing is intended to walk through how NORTHLINE™ is designed to fit alongside existing systems, roles, and reporting needs — with no commitment required.</p>
+    <div class="cta-actions">
+      <button class="btn-primary" data-scroll-to="contact">Request a Briefing</button>
+      <button class="btn-ghost" data-scroll-to="contact">Ask a Question</button>
+    </div>
+    <p class="cta-note">Illustrative platform overview. Not a live product demonstration or district deployment.</p>
+  </div>
+</section>
+
+<section class="contact-band" id="contact" aria-labelledby="contact-heading">
+  <div class="wrap">
+    <div class="contact-card">
+      <h3 id="contact-heading">Get in touch</h3>
+      <p>Function Media LLC contact information is being finalized for public release.</p>
+      <p>Verified contact details will be published here once available.</p>
+      <span class="contact-placeholder">[INSERT VERIFIED FUNCTION MEDIA EMAIL]</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <a href="#top" class="wordmark" aria-label="NORTHLINE home">
+        <span class="mark" aria-hidden="true"></span>
+        <span class="name" style="font-size:17px">NORTHLINE<em>™</em></span>
+      </a>
+      <nav class="foot-links" aria-label="Footer">
+        <div class="foot-col">
+          <h4>Platform</h4>
+          <a href="#platform">Overview</a>
+          <a href="#how">How It Works</a>
+          <a href="#roles">For Every Role</a>
+        </div>
+        <div class="foot-col">
+          <h4>Trust</h4>
+          <a href="#trust">Governance</a>
+          <button data-scroll-to="contact">Contact</button>
+        </div>
+        <div class="foot-col">
+          <h4>Company</h4>
+          <a href="#company">Function Media LLC</a>
+          <button data-scroll-to="contact">Get in Touch</button>
+        </div>
+      </nav>
+    </div>
+    <div class="foot-legal">
+      <span>NORTHLINE™ is a technology platform developed by Function Media LLC.</span>
+      <span>© 2026 Function Media LLC. All rights reserved.</span>
+      <span>NORTHLINE™ is a trademark of Function Media LLC.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('click', function(e){
+  var t = e.target.closest('[data-scroll-to]');
+  if(!t) return;
+  var el = document.getElementById(t.getAttribute('data-scroll-to'));
+  if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
+});
+</script>
+
+</body>
+</html>
